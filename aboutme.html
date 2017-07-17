@@ -37,6 +37,9 @@ article {
     padding: 1em;
     overflow: hidden;
 }
+circuit {
+    text-indent: 5mm;
+}
 </style>
 </head>
 <body>
@@ -52,18 +55,42 @@ article {
     <li><a href="#">Home</a></li>
     <li><a href="#">About Me</a></li>
     <li><a href="#">My Portfolio</a></li>
-    <li><a href="#">My First Circuit</a></li>
+    <circuit><li><a href="#">My First Circuit</a></li>
+    	
     	
   </ul>
 </nav>
 
 <article>
-  <h1>My Favorites!</h1>
-  <p>The pictures below are some of my personal favorites that always make me happy! Hover your cursor over the pictures to enlarge them!!</p>
+	<h1>My Favorites!</h1>
+	<p>The pictures below are some of my personal favorites that always make me happy! Hover your cursor over the pictures to enlarge them!!</p>
 
-<img src="https://nickiih.github.io/portfolio/puppy.jpg" alt="Golden Retriever Puppy" style="width:245px;height:228px;">
+	<head>
+	<script>
+  var puppy = function() {
+    document.getElementById('Golden-Retriever-Puppy').width='343';
+    document.getElementById('Golden-Retriever-Puppy').height='360';
+    
+  }
+  var basket = function() {
+    document.getElementById('Sleeping-Puppy').width='343';
+    document.getElementById('Sleeping-Puppy').height='360';
+  }
+  </script>
+ </head>
+ <body>
 
-  <img src="https://nickiih.github.io/portfolio/5.31.15-Puppies-Sleeping-in-Things2.jpg" alt="Sleeping Puppy" style="width:270px;height:228px;">
+ <img id="Golden-Retriever-Puppy" src="https://nickiih.github.io/portfolio/puppy.jpg"    width="245" height="225" name="golden"
+ onmouseover="puppy()"
+ onmouseout="golden.width='245';golden.height='225';" />
+ 
+ <img id="Sleeping-Puppy" src="https://nickiih.github.io/portfolio/5.31.15-Puppies-Sleeping-in-Things2.jpg"    width="245" height="225" name="sleeping"
+ onmouseover="basket()"
+ onmouseout="sleeping.width='245';sleeping.height='225';" />
+
+ </body>
+ </html>
+
 
 </article>
 
